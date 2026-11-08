@@ -15,11 +15,11 @@ Quelle: Meeting 1 und 2 mit Thomas Brandt (jeweils 12 und 8 Nachrichten)
 - **Mitarbeiter**, Attribute: Name, Qualifikation (Meister, Geselle, Lehrling), Stunden
 - **Kunde**, Attribute: Name, Auftrag
 - **Einsatzort**, Attribute: Adresse, Auftrag
-- **Auftrag**, Attribute: Auftrag_ID, Kunde, Datum, Status
+- **Auftrag**, Attribute: Auftrag_ID, Kunde, Datum, Status (ausstehend, beendet) 
 - **Leistung**, Attribute: Art (Installation, Reparatur, Notdienst), Dauer, Preis
 - **Material**, Attribute: Art (NYM-Kabel, Sicherungen, Dosen, Lüsterklemmen), Bestand
-- **Rechnung**, Attribute: Rechnung_ID, Auftrag, Betrag, Status
-- **Wartungsvertrag**, Attribute: Kunde, Leistungsstatus (Stromcheck, Notlichtprüfung), Bezahlungsstatus
+- **Rechnung**, Attribute: Rechnung_ID, Auftrag, Betrag, Status (ausgestellt_am, fällig_am, bezahlt_am)
+- **Wartungsvertrag**, Attribute: Kunde, Vertragsstatus (ausgestellt_am, gekündigt_am), Leistungsstatus (Stromcheck, Notlichtprüfung), Bezahlungsstatus (fällig_am, bezahlt_am)
 
 ## Beziehungen
 
@@ -35,11 +35,19 @@ Quelle: Meeting 1 und 2 mit Thomas Brandt (jeweils 12 und 8 Nachrichten)
 
 ## Widersprüche
 
-- **W1:** „mit dem Bus“ (Antwort 10) vs. vier Busse (Antwort 11) → Fuhrpark
-- **W2:** „kein Vertrag, […] ein schriftliches Angebot“ (Antwort 7) vs. Vertrag (Antwort 17)
+- **W1:** „mit dem Bus“ (Antwort 10) vs. vier Busse (Antwort 11) → Fuhrpark/Fahrzeuge
+- **W2:** „kein Vertrag, […] ein schriftliches Angebot“ (Antwort 7) vs. Vertrag (Antwort 17) → BR1
 
 ## Prioritäten
 
-1. Mitarbeiter → Zeiten und Orte
-2. Material (Bestand), Werkzeuge & Rechnungen 
-3. Tracking Wartungsverträge → Kunden, Einnahmen, Termine
+1. Mitarbeiter → Zeiten und Orte (v1)
+2. Material (Bestand), Werkzeuge & Rechnungen (v1)
+3. Tracking Wartungsverträge → Kunden, Einnahmen, Termine (v2)
+
+## Anmerkungen
+- 12 Mitarbeiter bestehend aus vier Meistern, fünf Gesellen, zwei Lehrlingen und Fr. Brandt
+- Arbeitszeiten unter der Woche sind von 7 bis 16 Uhr
+- wichtige Werkzeuge: Bohrhämmer, Multimeter, Steigleitern
+- es gibt ein Telefon für den normalen Dienst und eins für Notdienstanrufe
+- Wartungsvertrag: alle zwei Jahre Stromcheck & jährlich Notlichtprüfung
+- Werkstatt, Lager & Büro alles an einem Standort
